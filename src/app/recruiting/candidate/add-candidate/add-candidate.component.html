@@ -1,0 +1,33 @@
+<div class="container">
+    <h2>
+        Adding a new candidate to the HRM database
+    </h2>
+    <form [formGroup]="myForm" (ngSubmit)="submit()">
+        <div class="my-3">
+            <label class="form-label">Last Name*</label>
+            <input type="text" class="form-control" formControlName="lastName">
+            <span class="text-danger" *ngIf="lastName && lastName.invalid && lastName.touched">Invalid lastName</span>
+        </div>
+        <div class="my-3">
+            <label class="form-label">Middle Name</label>
+            <input type="text" class="form-control" formControlName="middleName">
+        </div>
+        <div class="my-3">
+            <label class="form-label">First Name*</label>
+            <input type="text" class="form-control" formControlName="firstName">
+            <span class="text-danger" *ngIf="firstName && firstName.invalid && firstName.touched">Invalid firstName</span>
+        </div>
+
+        <div class="my-3">
+            <label class="form-label">Email*</label>
+            <input type="email" class="form-control" formControlName="email">
+            <span class="text-danger" *ngIf="email && email.invalid && email.touched">Invalid email</span>
+        </div>
+        <div class="my-3">
+            <label class="form-label">ResumeURL*</label>
+            <input type="text" class="form-control" formControlName="resumeURL">
+            <span class="text-danger" *ngIf="resumeURL && resumeURL.invalid && resumeURL.touched">Invalid resumeURL</span>
+        </div>
+        <button  type="submit" [disabled]="!myForm.valid" class="btn btn-primary" >Submit</button>
+    </form>
+</div>

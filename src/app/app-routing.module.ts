@@ -6,13 +6,19 @@ import { AccessForbiddenComponent } from './access-forbidden/access-forbidden.co
 import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
-  {path:'login', component: LoginComponent},
-  { path: 'app', component: LayoutComponent, canActivate:[authGuard],  children: [
-    {path: 'employee', loadChildren: () => import('./employee/employee.module').then(m=>m.EmployeeModule)},
-    {path: 'vendor', loadChildren: () => import('./vendor/vendor.module').then(m=>m.VendorModule)}
-  ] },
+  { path: '', component: LoginComponent },
+  {
+    path: 'app', component: LayoutComponent, canActivate: [authGuard], children: [
+      { path: 'recruiting', loadChildren: () => import('./recruiting/recruiting.module').then(m => m.RecruitingModule) },
+      { path: 'onboarding', loadChildren: () => import('./onboarding/onboarding.module').then(m => m.OnboardingModule) },
+      { path: 'interview', loadChildren: () => import('./interview/interview.module').then(m => m.InterviewModule) },
+
+      // { path: 'employee', loadChildren: () => import('./employee/employee.module').then(m => m.EmployeeModule) },
+      // { path: 'vendor', loadChildren: () => import('./vendor/vendor.module').then(m => m.VendorModule) }
+    ]
+  },
   // {path:'**', component:AccessForbiddenComponent}
- 
+
 ];
 
 @NgModule({

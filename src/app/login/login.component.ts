@@ -16,7 +16,7 @@ constructor(private router:Router, private authService:AuthenticationService){}
   validateUser(loginForm:NgForm){
       this.authService.login(loginForm.value.userName, loginForm.value.password).subscribe((d:any)=>{
         localStorage.setItem('authenticationToken',d.token);
-        this.router.navigateByUrl('/app/employee/list');
+        this.router.navigateByUrl('/app');
       })
   }
 }
