@@ -4,9 +4,11 @@ import { LayoutComponent } from './layout/layout.component';
 import { authGuard } from './shared/guard/auth.guard';
 import { AccessForbiddenComponent } from './access-forbidden/access-forbidden.component';
 import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
+  { path: 'signup', component: SignupComponent },
   {
     path: 'app', component: LayoutComponent, canActivate: [authGuard], children: [
       { path: 'recruiting', loadChildren: () => import('./recruiting/recruiting.module').then(m => m.RecruitingModule) },

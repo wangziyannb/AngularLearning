@@ -1,11 +1,18 @@
-<form #loginForm="ngForm" (submit)="validateUser(loginForm)">
-    <div class="container">
-        <div class="my-3">
-            <input type="text"  name="userName" [(ngModel)]="userName" class="form-control" placeholder=" Enter username"/>
+<div class="container">
+    <form #loginForm="ngForm" (submit)="validateUser(loginForm)">
+        <div class="container">
+            <div class="my-3">
+                <input type="text" name="userName" [(ngModel)]="userName" class="form-control"
+                    placeholder=" Enter username" />
+            </div>
+            <div class="my-3">
+                <input type="password" name="password" [(ngModel)]="password" class="form-control"
+                    placeholder="Enter password" />
+            </div>
+            <button class="btn btn-primary">Login</button>
+            <div class="my-3">
+                <p>No account yet? <a href="/signup">Add a new one</a></p>
+            </div>
         </div>
-        <div class="my-3">
-            <input type="password" name="password" [(ngModel)]="password" class="form-control" placeholder="Enter password"/>
-        </div>
-        <button class="btn btn-primary">Login</button>
-    </div>
-</form>
+    </form>
+</div>

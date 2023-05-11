@@ -13,6 +13,6 @@ export class LayoutComponent {
   logout() {
     localStorage.removeItem("authenticationToken");
     localStorage.clear();
-    this.router.navigateByUrl("/login");
+    this.router.navigateByUrl("/");
   }
 }

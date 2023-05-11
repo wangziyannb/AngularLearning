@@ -16,6 +16,11 @@ export class AuthenticationService {
     }
     return this.httpClient.post('http://localhost:40125/api/Account/SignIn', userCredential);
   }
+  signUp(userInfo: any) {
+    console.log(userInfo);
+    
+    return this.httpClient.post('http://localhost:40125/api/Account/SignUp', userInfo);
+  }
   getToken() {
     if (localStorage.hasOwnProperty('authenticationToken'))
       return localStorage.getItem('authenticationToken');
