@@ -7,6 +7,8 @@ import { DeleteJobRequirementComponent } from './delete-job-requirement/delete-j
 import { GetJobRequirementComponent } from './get-job-requirement/get-job-requirement.component';
 import { ListJobRequirementComponent } from './list-job-requirement/list-job-requirement.component';
 import { UpdateJobRequirementComponent } from './update-job-requirement/update-job-requirement.component';
+import { JobRequirementService } from 'src/app/shared/services/recruiting/job-requirement.service';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -19,7 +21,10 @@ import { UpdateJobRequirementComponent } from './update-job-requirement/update-j
   ],
   imports: [
     CommonModule,
-    JobRequirementRoutingModule
-  ]
+    JobRequirementRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+  ],
+  providers: [JobRequirementService]
 })
 export class JobRequirementModule { }

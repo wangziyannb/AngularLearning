@@ -1,1 +1,62 @@
-<p>get-candidate works!</p>
+<div class="container">
+    <h2>
+        Use Id to retrive a candidate
+    </h2>
+    <div class="input-group mb-3">
+        <input type="text" [(ngModel)]="id" class="form-control" placeholder="Id of candidate" aria-label="Id"
+            aria-describedby="button-addon2">
+        <button class="btn btn-outline-secondary" type="button" id="button-addon2" (click)="submit()">Submit</button>
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>
+                    index
+                </th>
+                <th>
+                    candidateId
+                </th>
+                <th>
+                    firstName
+                </th>
+                <th>
+                    middleName
+                </th>
+                <th>
+                    lastName
+                </th>
+                <th>
+                    email
+                </th>
+                <th>
+                    resumeURL
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let c of candidates; index as i">
+                <td>
+                    {{i}}
+                </td>
+                <td>
+                    {{c.candidateId}}
+                </td>
+                <td>
+                    {{c.firstName}}
+                </td>
+                <td>
+                    {{c.middleName}}
+                </td>
+                <td>
+                    {{c.lastName}}
+                </td>
+                <td>
+                    {{c.email}}
+                </td>
+                <td>
+                    {{c.resumeURL}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

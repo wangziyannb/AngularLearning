@@ -7,6 +7,7 @@ import { DeleteSubmissionStatusComponent } from './delete-submission-status/dele
 import { GetSubmissionStatusComponent } from './get-submission-status/get-submission-status.component';
 import { ListSubmissionStatusComponent } from './list-submission-status/list-submission-status.component';
 import { UpdateSubmissionStatusComponent } from './update-submission-status/update-submission-status.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -19,7 +20,9 @@ import { UpdateSubmissionStatusComponent } from './update-submission-status/upda
   ],
   imports: [
     CommonModule,
-    SubmissionStatusRoutingModule
+    SubmissionStatusRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
   ]
 })
 export class SubmissionStatusModule { }

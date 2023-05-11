@@ -1,1 +1,102 @@
-<p>get-job-requirement works!</p>
+<h2>
+    Use Id to retrive a job requirement
+</h2>
+<div class="input-group mb-3">
+    <input type="text" [(ngModel)]="id" class="form-control" placeholder="Id of job requirement" aria-label="Id"
+        aria-describedby="button-addon2">
+    <button class="btn btn-outline-secondary" type="button" id="button-addon2" (click)="submit()">Submit</button>
+</div>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                index
+            </th>
+            <th>
+                jobRequirementId
+            </th>
+            <th>
+                numberOfPositions
+            </th>
+            <th>
+                title
+            </th>
+            <th>
+                description
+            </th>
+            <th>
+                hiringManagerId
+            </th>
+            <th>
+                hiringManagerName
+            </th>
+            <th>
+                startDate
+            </th>
+            <th>
+                isActivate
+            </th>
+            <th>
+                closedOn
+            </th>
+            <th>
+                closedReason
+            </th>
+            <th>
+                createdOn
+            </th>
+            <th>
+                jobCategory
+            </th>
+            <th>
+                employeeType
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let v of c; index as i">
+            <td>
+                {{i}}
+            </td>
+            <td>
+                {{v.jobRequirementId}}
+            </td>
+            <td>
+                {{v.numberOfPositions}}
+            </td>
+            <td>
+                {{v.title}}
+            </td>
+            <td>
+                {{v.description}}
+            </td>
+            <td>
+                {{v.hiringManagerId}}
+            </td>
+            <td>
+                {{v.hiringManagerName}}
+            </td>
+            <td>
+                {{v.startDate}}
+            </td>
+            <td>
+                {{v.isActivate}}
+            </td>
+            <td>
+                {{v.closedOn}}
+            </td>
+            <td>
+                {{v.closedReason}}
+            </td>
+            <td>
+                {{v.createdOn}}
+            </td>
+            <td>
+                {{v.jobCategory}}
+            </td>
+            <td>
+                {{v.employeeType}}
+            </td>
+        </tr>
+    </tbody>
+</table>

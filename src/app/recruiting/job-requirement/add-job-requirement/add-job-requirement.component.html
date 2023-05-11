@@ -1,1 +1,57 @@
-<p>add-job-requirement works!</p>
+<div class="container">
+    <h2>
+        Add a new Job Requirement to the HRM database
+    </h2>
+    <form [formGroup]="myForm" (ngSubmit)="submit()">
+        <div class="my-3">
+            <label class="form-label">number of position</label>
+            <input type="text" class="form-control" formControlName="numberOfPosition">
+        </div>
+        <div class="my-3">
+            <label class="form-label">title</label>
+            <input type="text" class="form-control" formControlName="title">
+        </div>
+        <div class="my-3">
+            <label class="form-label">description</label>
+            <input type="text" class="form-control" formControlName="description">
+        </div>
+        <div class="my-3">
+            <label class="form-label">hiring manager Id</label>
+            <input type="text" class="form-control" formControlName="hiringManagerId">
+        </div>
+        <div class="my-3">
+            <label class="form-label">hiring manager Name</label>
+            <input type="text" class="form-control" formControlName="hiringManagerName">
+        </div>
+        <div class="my-3">
+            <label class="form-label">start date</label>
+            <input type="datetime" class="form-control" formControlName="startDate">
+        </div>
+        <div class="form-check">
+            <input mdbCheckbox class="form-check-input" type="checkbox" [value]="true" id="flexCheckDefault"
+                formControlName="isActivate" />
+            <label class="form-check-label" for="flexRadioDefault1"> isActivate </label>
+        </div>
+        <div class="my-3">
+            <label class="form-label">closed on</label>
+            <input type="datetime" class="form-control" formControlName="closedOn">
+        </div>
+        <div class="my-3">
+            <label class="form-label">closed Reason</label>
+            <input type="text" class="form-control" formControlName="closedReason">
+        </div>
+        <div class="my-3">
+            <label class="form-label">created on</label>
+            <input type="datetime" class="form-control" formControlName="createdOn">
+        </div>
+        <div class="my-3">
+            <label class="form-label">job Category</label>
+            <input type="text" class="form-control" formControlName="jobCategory">
+        </div>
+        <div class="my-3">
+            <label class="form-label">employee Type</label>
+            <input type="text" class="form-control" formControlName="employeeType">
+        </div>
+        <button type="submit" [disabled]="!myForm.valid" class="btn btn-primary">Submit</button>
+    </form>
+</div>

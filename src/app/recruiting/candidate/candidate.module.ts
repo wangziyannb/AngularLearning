@@ -8,7 +8,7 @@ import { GetCandidateComponent } from './get-candidate/get-candidate.component';
 import { ListCandidateComponent } from './list-candidate/list-candidate.component';
 import { UpdateCandidateComponent } from './update-candidate/update-candidate.component';
 import { CandidateService } from 'src/app/shared/services/recruiting/candidate.service';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,7 +21,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     CandidateRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule,
   ],
   providers: [CandidateService]
 })

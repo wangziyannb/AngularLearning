@@ -1,1 +1,33 @@
-<p>add-submission works!</p>
+<div class="container">
+    <h2>
+        Add a new submission to the HRM database
+    </h2>
+    <form [formGroup]="myForm" (ngSubmit)="submit()">
+        <div class="my-3">
+            <label class="form-label">job Requirement Id</label>
+            <input type="text" class="form-control" formControlName="jobRequirementId">
+        </div>
+        <div class="my-3">
+            <label class="form-label">candidate Id</label>
+            <input type="text" class="form-control" formControlName="candidateId">
+        </div>
+        <div class="my-3">
+            <label class="form-label">submission Status Code</label>
+            <input type="text" class="form-control" formControlName="submissionStatusCode">
+        </div>
+        <div class="my-3">
+            <label class="form-label">submitted On</label>
+            <input type="datetime" class="form-control" formControlName="submittedOn">
+        </div>
+        <div class="my-3">
+            <label class="form-label">confirmed On</label>
+            <input type="datetime" class="form-control" formControlName="confirmedOn">
+        </div>
+        <div class="my-3">
+            <label class="form-label">rejected On</label>
+            <input type="datetime" class="form-control" formControlName="rejectedOn">
+        </div>
+        
+        <button type="submit" [disabled]="!myForm.valid" class="btn btn-primary">Submit</button>
+    </form>
+</div>
