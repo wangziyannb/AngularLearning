@@ -1,36 +1,45 @@
+<div class="bg-image" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/76.jpg');
+    height: 100vh">
 <header>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">HRM Control Panel</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" href="/app/recruiting" role="button">
-                  Recruiting
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/app/onboarding" role="button">
-                  Onboarding
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/app/interview" role="button">
-                  Interview
-                </a>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <button class="btn btn-outline-success" type="button" (click)="logout()">Logout</button>
-            </form>
-          </div>
-        </div>
-      </nav>
+  <nav class="navbar navbar-expand-lg bg-gradient">
+    <div class="container-fluid">
+      <a class="navbar-brand">HRM Control Panel</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="/app/recruiting" role="button">
+              Recruiting
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/app/onboarding" role="button">
+              Onboarding
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/app/interview" role="button">
+              Interview
+            </a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <button class="btn btn-outline-success" type="button" (click)="logout()">Logout</button>
+        </form>
+      </div>
+    </div>
+  </nav>
 </header>
 
-<div class="container"></div>
-<router-outlet></router-outlet>
-<footer></footer>
+
+  <div class="container"></div>
+  <router-outlet></router-outlet>
+  <footer>
+    <div class="fixed-bottom bg-gradient footer">
+      <p>Built via <a href="https://getbootstrap.com/">Bootstrap</a> and <a href="https://angular.io/">Angular</a> by Ziyan Wang</p>
+    </div>
+  </footer>
+</div>
