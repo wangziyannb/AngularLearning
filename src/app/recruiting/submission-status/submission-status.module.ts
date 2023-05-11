@@ -8,6 +8,7 @@ import { GetSubmissionStatusComponent } from './get-submission-status/get-submis
 import { ListSubmissionStatusComponent } from './list-submission-status/list-submission-status.component';
 import { UpdateSubmissionStatusComponent } from './update-submission-status/update-submission-status.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { SubmissionStatusService } from 'src/app/shared/services/recruiting/submission-status.service';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     SubmissionStatusRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-  ]
+  ],
+  providers: [SubmissionStatusService]
 })
 export class SubmissionStatusModule { }

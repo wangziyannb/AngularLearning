@@ -8,6 +8,7 @@ import { GetSubmissionComponent } from './get-submission/get-submission.componen
 import { ListSubmissionComponent } from './list-submission/list-submission.component';
 import { UpdateSubmissionComponent } from './update-submission/update-submission.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { SubmissionService } from 'src/app/shared/services/recruiting/submission.service';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     SubmissionRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-  ]
+  ],
+  providers: [SubmissionService]
 })
 export class SubmissionModule { }

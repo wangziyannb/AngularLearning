@@ -7,6 +7,8 @@ import { GetEmployeeRoleComponent } from './get-employee-role/get-employee-role.
 import { ListEmployeeRoleComponent } from './list-employee-role/list-employee-role.component';
 import { DeleteEmployeeRoleComponent } from './delete-employee-role/delete-employee-role.component';
 import { UpdateEmployeeRoleComponent } from './update-employee-role/update-employee-role.component';
+import { EmployeeRoleService } from 'src/app/shared/services/onboarding/employee-role.service';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -19,7 +21,10 @@ import { UpdateEmployeeRoleComponent } from './update-employee-role/update-emplo
   ],
   imports: [
     CommonModule,
-    EmployeeRoleRoutingModule
-  ]
+    EmployeeRoleRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+  ],
+  providers: [EmployeeRoleService]
 })
 export class EmployeeRoleModule { }

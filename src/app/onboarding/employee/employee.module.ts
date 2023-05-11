@@ -7,6 +7,8 @@ import { DeleteEmployeeComponent } from './delete-employee/delete-employee.compo
 import { GetEmployeeComponent } from './get-employee/get-employee.component';
 import { ListEmployeeComponent } from './list-employee/list-employee.component';
 import { UpdateEmployeeComponent } from './update-employee/update-employee.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { EmployeeService } from 'src/app/shared/services/onboarding/employee.service';
 
 
 @NgModule({
@@ -19,7 +21,10 @@ import { UpdateEmployeeComponent } from './update-employee/update-employee.compo
   ],
   imports: [
     CommonModule,
-    EmployeeRoutingModule
-  ]
+    EmployeeRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+  ],
+  providers: [EmployeeService]
 })
 export class EmployeeModule { }

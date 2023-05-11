@@ -1,1 +1,52 @@
-<p>add-employee works!</p>
+<div class="container">
+    <h2>
+        Add a new employee to the HRM database
+    </h2>
+    <form [formGroup]="myForm" (ngSubmit)="submit()">
+        <div class="my-3">
+            <label class="form-label">firstName</label>
+            <input type="text" class="form-control" formControlName="firstName">
+        </div>
+        <div class="my-3">
+            <label class="form-label">lastName</label>
+            <input type="text" class="form-control" formControlName="lastName">
+        </div>
+        <div class="my-3">
+            <label class="form-label">middlename</label>
+            <input type="text" class="form-control" formControlName="middlename">
+        </div>
+        <div class="my-3">
+            <label class="form-label">ssn</label>
+            <input type="text" class="form-control" formControlName="ssn">
+        </div>
+        <div class="my-3">
+            <label class="form-label">hireDate</label>
+            <input type="datetime" class="form-control" formControlName="hireDate">
+        </div>
+        <div class="my-3">
+            <label class="form-label">endDate</label>
+            <input type="datetime" class="form-control" formControlName="endDate">
+        </div>
+        <div class="my-3">
+            <label class="form-label">employeeCategoryCode</label>
+            <input type="text" class="form-control" formControlName="employeeCategoryCode">
+        </div>
+        <div class="my-3">
+            <label class="form-label">employeeStatusCode</label>
+            <input type="text" class="form-control" formControlName="employeeStatusCode">
+        </div>
+        <div class="my-3">
+            <label class="form-label">address</label>
+            <input type="text" class="form-control" formControlName="address">
+        </div>
+        <div class="my-3">
+            <label class="form-label">email</label>
+            <input type="text" class="form-control" formControlName="email">
+        </div>
+        <div class="my-3">
+            <label class="form-label">employeeRoleId</label>
+            <input type="text" class="form-control" formControlName="employeeRoleId">
+        </div>
+        <button type="submit" [disabled]="!myForm.valid" class="btn btn-primary">Submit</button>
+    </form>
+</div>

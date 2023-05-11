@@ -7,6 +7,8 @@ import { GetEmployeeCategoryComponent } from './get-employee-category/get-employ
 import { ListEmployeeCategoryComponent } from './list-employee-category/list-employee-category.component';
 import { DeleteEmployeeCategoryComponent } from './delete-employee-category/delete-employee-category.component';
 import { UpdateEmployeeCategoryComponent } from './update-employee-category/update-employee-category.component';
+import { EmployeeCategoryService } from 'src/app/shared/services/onboarding/employee-category.service';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -19,7 +21,10 @@ import { UpdateEmployeeCategoryComponent } from './update-employee-category/upda
   ],
   imports: [
     CommonModule,
-    EmployeeCategoryRoutingModule
-  ]
+    EmployeeCategoryRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+  ],
+  providers: [EmployeeCategoryService]
 })
 export class EmployeeCategoryModule { }

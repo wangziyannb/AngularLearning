@@ -7,6 +7,8 @@ import { GetEmployeeStatusComponent } from './get-employee-status/get-employee-s
 import { ListEmployeeStatusComponent } from './list-employee-status/list-employee-status.component';
 import { DeleteEmployeeStatusComponent } from './delete-employee-status/delete-employee-status.component';
 import { UpdateEmployeeStatusComponent } from './update-employee-status/update-employee-status.component';
+import { EmployeeStatusService } from 'src/app/shared/services/onboarding/employee-status.service';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -19,7 +21,10 @@ import { UpdateEmployeeStatusComponent } from './update-employee-status/update-e
   ],
   imports: [
     CommonModule,
-    EmployeeStatusRoutingModule
-  ]
+    EmployeeStatusRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+  ],
+  providers: [EmployeeStatusService]
 })
 export class EmployeeStatusModule { }
