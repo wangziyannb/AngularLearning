@@ -1,1 +1,12 @@
-<p>add-interview-type works!</p>
+<div class="container">
+    <h2>
+        Add a new interview type to the HRM database
+    </h2>
+    <form [formGroup]="myForm" (ngSubmit)="submit()">
+        <div class="my-3">
+            <label class="form-label">description</label>
+            <input type="text" class="form-control" formControlName="description">
+        </div>
+        <button type="submit" [disabled]="!myForm.valid" class="btn btn-primary">Submit</button>
+    </form>
+</div>

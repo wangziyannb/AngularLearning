@@ -1,1 +1,46 @@
-<p>list-interview-feedback works!</p>
+<div class="container">
+    <h2>
+        Retrive all Interview feedbacks
+    </h2>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>
+                    index
+                </th>
+                <th>
+                    interviewFeedbackId
+                </th>
+                <th>
+                    rating
+                </th>
+                <th>
+                    comment
+                </th>
+                <th>
+                    interviewId
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let v of c; index as i">
+                <td>
+                    {{i}}
+                </td>
+                <td>
+                    {{v.interviewFeedbackId}}
+                </td>
+                <td>
+                    {{v.rating}}
+                </td>
+                <td>
+                    {{v.comment}}
+                </td>
+                <td>
+                    {{v.interviewId}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

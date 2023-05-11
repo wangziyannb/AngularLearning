@@ -7,6 +7,8 @@ import { GetInterviewerComponent } from './get-interviewer/get-interviewer.compo
 import { ListInterviewerComponent } from './list-interviewer/list-interviewer.component';
 import { DeleteInterviewerComponent } from './delete-interviewer/delete-interviewer.component';
 import { UpdateInterviewerComponent } from './update-interviewer/update-interviewer.component';
+import { InterviewerService } from 'src/app/shared/services/interview/interviewer.service';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -19,7 +21,10 @@ import { UpdateInterviewerComponent } from './update-interviewer/update-intervie
   ],
   imports: [
     CommonModule,
-    InterviewerRoutingModule
-  ]
+    InterviewerRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+  ],
+  providers: [InterviewerService]
 })
 export class InterviewerModule { }

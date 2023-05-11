@@ -7,6 +7,8 @@ import { GetInterviewTypeComponent } from './get-interview-type/get-interview-ty
 import { ListInterviewTypeComponent } from './list-interview-type/list-interview-type.component';
 import { DeleteInterviewTypeComponent } from './delete-interview-type/delete-interview-type.component';
 import { UpdateInterviewTypeComponent } from './update-interview-type/update-interview-type.component';
+import { InterviewTypeService } from 'src/app/shared/services/interview/interview-type.service';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -19,7 +21,10 @@ import { UpdateInterviewTypeComponent } from './update-interview-type/update-int
   ],
   imports: [
     CommonModule,
-    InterviewTypeRoutingModule
-  ]
+    InterviewTypeRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+  ],
+  providers: [InterviewTypeService]
 })
 export class InterviewTypeModule { }

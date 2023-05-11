@@ -7,6 +7,8 @@ import { GetInterviewComponent } from './get-interview/get-interview.component';
 import { ListInterviewComponent } from './list-interview/list-interview.component';
 import { DeleteInterviewComponent } from './delete-interview/delete-interview.component';
 import { UpdateInterviewComponent } from './update-interview/update-interview.component';
+import { InterviewService } from 'src/app/shared/services/interview/interview.service';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -19,7 +21,10 @@ import { UpdateInterviewComponent } from './update-interview/update-interview.co
   ],
   imports: [
     CommonModule,
-    InterviewRoutingModule
-  ]
+    InterviewRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+  ],
+  providers: [InterviewService]
 })
 export class InterviewModule { }

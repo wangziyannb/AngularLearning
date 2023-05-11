@@ -1,1 +1,32 @@
-<p>add-interview works!</p>
+<div class="container">
+    <h2>
+        Add a new interview to the HRM database
+    </h2>
+    <form [formGroup]="myForm" (ngSubmit)="submit()">
+        <div class="my-3">
+            <label class="form-label">recruiterId</label>
+            <input type="text" class="form-control" formControlName="recruiterId">
+        </div>
+        <div class="my-3">
+            <label class="form-label">submissionId</label>
+            <input type="text" class="form-control" formControlName="submissionId">
+        </div>
+        <div class="my-3">
+            <label class="form-label">interviewTypeCode</label>
+            <input type="text" class="form-control" formControlName="interviewTypeCode">
+        </div>
+        <div class="my-3">
+            <label class="form-label">interviewRound</label>
+            <input type="text" class="form-control" formControlName="interviewRound">
+        </div>
+        <div class="my-3">
+            <label class="form-label">scheduledOn</label>
+            <input type="datetime" class="form-control" formControlName="scheduledOn">
+        </div>
+        <div class="my-3">
+            <label class="form-label">interviewerId</label>
+            <input type="text" class="form-control" formControlName="interviewerId">
+        </div>
+        <button type="submit" [disabled]="!myForm.valid" class="btn btn-primary">Submit</button>
+    </form>
+</div>

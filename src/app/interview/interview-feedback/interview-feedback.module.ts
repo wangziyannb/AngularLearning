@@ -7,6 +7,8 @@ import { GetInterviewFeedbackComponent } from './get-interview-feedback/get-inte
 import { ListInterviewFeedbackComponent } from './list-interview-feedback/list-interview-feedback.component';
 import { DeleteInterviewFeedbackComponent } from './delete-interview-feedback/delete-interview-feedback.component';
 import { UpdateInterviewFeedbackComponent } from './update-interview-feedback/update-interview-feedback.component';
+import { InterviewFeedbackService } from 'src/app/shared/services/interview/interview-feedback.service';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -19,7 +21,10 @@ import { UpdateInterviewFeedbackComponent } from './update-interview-feedback/up
   ],
   imports: [
     CommonModule,
-    InterviewFeedbackRoutingModule
-  ]
+    InterviewFeedbackRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+  ],
+  providers: [InterviewFeedbackService]
 })
 export class InterviewFeedbackModule { }
