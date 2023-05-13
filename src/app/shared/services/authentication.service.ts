@@ -14,12 +14,10 @@ export class AuthenticationService {
       username: userName,
       password: password
     }
-    return this.httpClient.post('http://localhost:40125/api/Account/SignIn', userCredential);
+    return this.httpClient.post('http://20.241.153.128/api/Account/SignIn', userCredential);
   }
   signUp(userInfo: any) {
-    console.log(userInfo);
-    
-    return this.httpClient.post('http://localhost:40125/api/Account/SignUp', userInfo);
+    return this.httpClient.post('http://20.241.153.128/api/Account/SignUp', userInfo);
   }
   getToken() {
     if (localStorage.hasOwnProperty('authenticationToken'))

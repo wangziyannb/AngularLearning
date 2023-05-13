@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class JobRequirementService {
-  baseUrl: string = "http://localhost:40123/api/JobRequirement/"
+  baseUrl: string = "http://20.246.201.206/api/JobRequirement/"
   constructor(private http: HttpClient) {
 
   }
@@ -27,6 +27,6 @@ export class JobRequirementService {
   }
 
   update(jr: any) {
-    return this.http.post(this.baseUrl + 'Update', jr);
+    return this.http.put(this.baseUrl + 'Update', jr);
   }
 }

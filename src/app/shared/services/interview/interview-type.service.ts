@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class InterviewTypeService {
-  baseUrl: string = "http://localhost:40126/api/InterviewType/"
+  baseUrl: string = "http://20.253.16.4/api/InterviewType/"
   constructor(private http: HttpClient) {
 
   }
@@ -27,6 +27,6 @@ export class InterviewTypeService {
   }
 
   update(obj: any) {
-    return this.http.post(this.baseUrl + 'Update', obj);
+    return this.http.put(this.baseUrl + 'Update', obj);
   }
 }

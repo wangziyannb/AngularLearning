@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class SubmissionStatusService {
-  baseUrl: string = "http://localhost:40123/api/SubmissionStatus/"
+  baseUrl: string = "http://20.246.201.206/api/SubmissionStatus/"
   constructor(private http: HttpClient) {
 
   }
@@ -27,6 +27,6 @@ export class SubmissionStatusService {
   }
 
   update(obj: any) {
-    return this.http.post(this.baseUrl + 'Update', obj);
+    return this.http.put(this.baseUrl + 'Update', obj);
   }
 }
