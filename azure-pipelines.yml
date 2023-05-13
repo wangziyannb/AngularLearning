@@ -16,15 +16,29 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
+    cd AngularLearning/
     npm install -g @angular/cli
     npm install
     ng build --prod
   displayName: 'npm install and build'
-
+  workingDirectory: '$(Build.SourcesDirectory)'
 - task: ArchiveFiles@2
   inputs:
-    rootFolderOrFile: '$(Build.BinariesDirectory)'
-    includeRootFolder: true
+    rootFolderOrFile: '$(System.DefaultWorkingDirectory)/AngularLearning/'
+    includeRootFolder: false
     archiveType: 'zip'
     archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
     replaceExistingArchive: true
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
+
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Azure subscription 1 (7e707f4a-cd4d-4b03-8373-69a1c24f180e)'
+    appType: 'webApp'
+    WebAppName: 'HRMSystemWang'
+    packageForLinux: '$(Pipeline.Workspace)/drop/$(Build.BuildId).zip'
