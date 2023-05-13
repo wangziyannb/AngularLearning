@@ -16,14 +16,15 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
+    cd '$(System.DefaultWorkingDirectory)'
     npm install -g @angular/cli
     npm install
     ng build --prod
   displayName: 'npm install and build'
-  workingDirectory: '$(Build.SourcesDirectory)'
+
 - task: ArchiveFiles@2
   inputs:
-    rootFolderOrFile: '$(Build.SourcesDirectory)/dist/my-app-3/'
+    rootFolderOrFile: '$(System.DefaultWorkingDirectory)/dist/my-app-3/'
     includeRootFolder: false
     archiveType: 'zip'
     archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
