@@ -16,12 +16,13 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
-    cd '$(System.DefaultWorkingDirectory)'
     npm install -g @angular/cli
     npm install
-    ng build --prod
   displayName: 'npm install and build'
-
+- task: CmdLine@2
+  displayName: "Build Angular app"
+  inputs:
+    script: 'ng build'
 - task: ArchiveFiles@2
   inputs:
     rootFolderOrFile: '$(System.DefaultWorkingDirectory)/dist/my-app-3/'
